@@ -1,7 +1,8 @@
-package com.ssharanyab.furnituar
+package com.ssharanyab.furnituar.roomdb
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.ssharanyab.furnituar.roomdb.Product
 
 @Dao
 interface ProductDao {

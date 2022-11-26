@@ -1,4 +1,4 @@
-package com.ssharanyab.furnituar
+package com.ssharanyab.furnituar.roomdb
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

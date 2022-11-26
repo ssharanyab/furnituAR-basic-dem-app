@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.ssharanyab.furnituar.AppDatabase
+import com.ssharanyab.furnituar.roomdb.AppDatabase
 import com.ssharanyab.furnituar.R
 import com.ssharanyab.furnituar.adaptor.AdapterCart
 import com.ssharanyab.furnituar.models.ViewModel
@@ -40,7 +40,7 @@ class CartActivity : AppCompatActivity() {
             GlobalScope.launch {
                 appDatabase.productDao().deleteAll()
             }
-            Toast.makeText(this@CartActivity,"Checkout Sucessful",Toast.LENGTH_LONG).show()
+            Toast.makeText(this@CartActivity,"Cart Emptied",Toast.LENGTH_LONG).show()
             cartEmptyText.visibility = TextView.VISIBLE
             recyclerView.visibility = RecyclerView.GONE
         }

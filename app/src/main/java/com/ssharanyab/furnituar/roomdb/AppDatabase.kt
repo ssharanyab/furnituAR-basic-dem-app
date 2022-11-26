@@ -1,4 +1,4 @@
-package com.ssharanyab.furnituar
+package com.ssharanyab.furnituar.roomdb
 
 import android.content.Context
 import androidx.room.Database
@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase
 @Database(entities = [Product::class], version = 1)
 abstract class AppDatabase : RoomDatabase(){
 
-    abstract fun productDao():ProductDao
+    abstract fun productDao(): ProductDao
     companion object{
         @Volatile
         private var INSTANCE: AppDatabase?=null

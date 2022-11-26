@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.ssharanyab.furnituar.Product
+import com.ssharanyab.furnituar.roomdb.Product
 import com.ssharanyab.furnituar.R
 
 class AdapterCart:RecyclerView.Adapter<AdapterCart.ViewHolder>() {

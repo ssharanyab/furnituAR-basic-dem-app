@@ -3,12 +3,9 @@ package com.ssharanyab.furnituar.models
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.viewModelScope
-import com.ssharanyab.furnituar.AppDatabase
-import com.ssharanyab.furnituar.Product
-import com.ssharanyab.furnituar.Repository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
+import com.ssharanyab.furnituar.roomdb.AppDatabase
+import com.ssharanyab.furnituar.roomdb.Product
+import com.ssharanyab.furnituar.roomdb.Repository
 
 class ViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: Repository
@@ -20,9 +17,4 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
         allProducts = repository.readAllProduct
     }
 
-     fun insert(product: Product){
-         viewModelScope.launch (Dispatchers.IO){
-             repository.insert(product)
-         }
-     }
 }

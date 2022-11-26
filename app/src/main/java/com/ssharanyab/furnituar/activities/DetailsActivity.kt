@@ -6,11 +6,10 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import com.ssharanyab.furnituar.AppDatabase
-import com.ssharanyab.furnituar.Product
+import com.ssharanyab.furnituar.roomdb.AppDatabase
+import com.ssharanyab.furnituar.roomdb.Product
 import com.ssharanyab.furnituar.models.Model
 import com.ssharanyab.furnituar.R
-import com.ssharanyab.furnituar.databinding.ActivityMainBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -45,7 +44,6 @@ class DetailsActivity : AppCompatActivity() {
         }
     }
     private fun writeData(name:String, price:String){
-        var qty = 0
         if( name.isNotEmpty()&& price.isNotEmpty()){
             val product = Product(
                 null,
@@ -56,9 +54,9 @@ class DetailsActivity : AppCompatActivity() {
                 appDatabase.productDao().insert(product)
             }
 
-            Toast.makeText(this@DetailsActivity,"Added", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@DetailsActivity,"Added to Cart", Toast.LENGTH_LONG).show()
         }else{
-            Toast.makeText(this@DetailsActivity,"Fill Detais", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@DetailsActivity,"Fill Details", Toast.LENGTH_SHORT).show()
         }
 
     }
